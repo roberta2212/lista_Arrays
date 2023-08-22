@@ -7,12 +7,24 @@
     //As bebidas a serem compradas são: bebida1, bebida2, bebida3.
     //A lista completa de compras é: fruta1, fruta2, fruta3, bebida1, bebida2, bebida3.
 
-    //ENTRADA
+    
+    let frutas = [];
+let bebidas = [];
+
+for (let i = 0; i < 3; i++) {
+    let fruta = prompt("Insira uma fruta para a lista de compras:");
+    frutas.push(fruta);
+}
 
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+for (let i = 0; i < 3; i++) {
+    let bebida = prompt("Insira uma bebida para a lista de compras:");
+    bebidas.push(bebida);
+}
+let frutasFormatadas = "As frutas a serem compradas são: " + frutas.join(", ") + ".";
+let bebidasFormatadas = "As bebidas a serem compradas são: " + bebidas.join(", ") + ".";
+let listaCompleta = "A lista completa de compras é: " + frutas.concat(bebidas).join(", ") + ".";
+console.log(frutasFormatadas);
+console.log(bebidasFormatadas);
+console.log(listaCompleta);
 </script>

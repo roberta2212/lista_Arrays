@@ -5,12 +5,42 @@
 
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
-    //ENTRADA
+    #include <iostream>
+#include <string>
 
+int main() {
+    std::string palavra;
+    char letra;
 
-    //PROCESSAMENTO
+    std::cout << "Digite uma palavra: ";
+    std::cin >> palavra;
 
+    if (palavra.empty()) {
+        std::cout << "A palavra digitada está vazia." << std::endl;
+        return 0;
+    }
 
-    //SAÍDA
+    std::cout << "Digite a letra que deseja encontrar na palavra: ";
+    std::cin >> letra;
+
+    bool encontrada = false;
+    int primeiraPosicao = -1;
+
+    for (int i = 0; i < palavra.length(); ++i) {
+        if (palavra[i] == letra) {
+            encontrada = true;
+            primeiraPosicao = i;
+            break;
+        }
+    }
+
+    if (encontrada) {
+        std::cout << "A letra '" << letra << "' existe na palavra e está na posição " << primeiraPosicao << "." << std::endl;
+    } else {
+        std::cout << "A letra '" << letra << "' não foi encontrada na palavra." << std::endl;
+    }
+
+    return 0;
+}
 
 </script>

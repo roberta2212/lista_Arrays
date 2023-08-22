@@ -5,12 +5,15 @@
     //Pergunte ao usuário qual carro deseja REMOVER da lista.
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
-    //ENTRADA
-
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+    
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carroRemover = prompt("Qual carro SUV deseja remover?");
+    let indiceCarro = carrosSUV.indexOf(carroRemover);
+if (indiceCarro !== -1) {
+    carrosSUV.splice(indiceCarro, 1);
+    console.log("Carro removido com sucesso!");
+} else {
+    console.log("Carro não encontrado na lista.");
+}
+console.log("Lista antiga de SUVs: " + carrosSUV.join(", "));
 </script>

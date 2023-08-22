@@ -9,12 +9,32 @@
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+let carrosHatch = ["308", "Focus", "i30"];
+for (let i = 0; i < 3; i++) {
+    let novoVeiculo = prompt("Informe o nome do novo veículo:");
+    let tipoVeiculo = prompt("Informe o tipo do veículo (SUV, Sedan ou Hatch):").toLowerCase();
 
+    switch (tipoVeiculo) {
+        case "suv":
+            carrosSUV.push(novoVeiculo);
+            break;
+        case "sedan":
+            carrosSedan.push(novoVeiculo);
+            break;
+        case "hatch":
+            carrosHatch.push(novoVeiculo);
+            break;
+        default:
+            alert("Tipo de veículo inválido.");
+            i--; 
+            break;
+    }
+}
+console.log("Carros SUV:", carrosSUV);
+console.log("Carros Sedan:", carrosSedan);
+console.log("Carros Hatch:", carrosHatch);
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
 
 </script>
